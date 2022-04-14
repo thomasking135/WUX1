@@ -1,0 +1,612 @@
+/* No CSS */
+/*# sourceMappingURL=main.css.map */
+/*Join button hover*/
+.join:hover{
+  font-size: 20px;
+  background-color: rgb(14, 165, 114);
+  color: black;
+  text-align: center;
+  text-decoration: none;
+}
+/*Join button settings*/
+.join{
+  padding: 15px;
+  border-radius: 25px;
+  width: 100px;
+  height:50px;
+  margin-bottom: 10px;
+  background-color: rgb(117, 167, 211);
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*Contact button settings*/
+.contact{
+  width: 100px;
+  height:50px;
+  border-radius: 25px;
+  padding: 15px;
+  background-color: #a1d3ac;
+  font-weight: bold;
+  text-align: right;
+  display: block;
+  float: right;
+}
+/*Contact button hover*/
+.contact:hover{
+  transform: scale(1.1);
+  font-weight: bolder;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+}
+/*box settings*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* ----- container stylings: -> centers the whole content of the page -> defines width and height for container ----- */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 800px;
+  padding-bottom: 50px;
+}
+/* ----- end of container stylings ----- */
+/* provides padding to main heading */
+.main-heading {
+  padding: 2rem 0 2rem 0;
+}
+.content {
+  position: relative;
+}
+/* ----- carousel content stylings ----- */
+/* places the carousel content on center of the carousel */
+.carousel-content {
+  position: absolute;
+ /*to center the content horizontally and vertically*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 50;
+}
+.carousel-heading {
+  font-size: 3rem;
+  color: #308d46;
+  margin-bottom: 1rem;
+}
+/*----- end of carousel content stylings ----- */
+/* ----- slideshow stylings ----- */
+.slideshow {
+  height: 100%;
+  overflow: hidden;
+ /* to hide slides in x-direction */
+  position: relative;
+}
+/* wrapper which wraps all the slideshow images stylings */
+.slideshow-wrapper {
+  display: flex;
+ /* We give it width as 400% because we are making a 4 image carousel. If you want to make for example, 5 images carousel, then give width as 500%. */
+  width: 400%;
+  height: 100%;
+  position: relative;
+ /* you can change the animation settings from below */
+  animation: slideshow 20s infinite;
+}
+/* define width and height for images*/
+.slide {
+  width: 100%;
+  height: 100%;
+}
+.slide-img {
+  width: 100%;
+  height: 100%;
+  /*object-fit: cover;*/
+}
+/* @keyframes are used to provide animations We make these settings for 4 image carousel. Make modification according to your needs. */
+@keyframes slideshow {
+  0% {
+      left: 0;
+ }
+  10% {
+      left: 0;
+ }
+  15% {
+      left: -100%;
+ }
+  25% {
+      left: -100%;
+ }
+  30% {
+      left: -200%;
+ }
+  40% {
+      left: -200%;
+ }
+  45% {
+      left: -300%;
+ }
+  55% {
+      left: -300%;
+ }
+  60% {
+      left: -200%;
+ }
+  70% {
+      left: -200%;
+ }
+  75% {
+      left: -100%;
+ }
+  85% {
+      left: -100%;
+ }
+  90% {
+      left: 0%;
+ }
+}
+/* ----- end of slideshow stylings ----- */
+/* ----- carousel control buttons stylings ----- */
+.slide-btn {
+  background-color: grey;
+  border-radius: 50%;
+  border: .2rem solid #d38800;
+  width: 1.2rem;
+  height: 1.2rem;
+  outline: none;
+  cursor: pointer;
+ /* stylings for positioning the buttons at the bottom of the carousel */
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 70;
+}
+/* As we provide position as absolute, the buttons places one over the other. So, we have to place them individually at their correct positions. */
+.slide-btn-1 {
+  left: 45%;
+}
+.slide-btn-2 {
+  left: 50%;
+}
+.slide-btn-3 {
+  left: 55%;
+}
+.slide-btn-4 {
+  left: 60%;
+}
+/* When we focus on the particular button, the animation stops to that particular image to which the button is associated. */
+.slide-btn-1:focus~.slideshow-wrapper {
+  animation: none;
+  left: 0;
+}
+.slide-btn-2:focus~.slideshow-wrapper {
+  animation: none;
+  left: -100%;
+}
+.slide-btn-3:focus~.slideshow-wrapper {
+  animation: none;
+  left: -200%;
+}
+.slide-btn-4:focus~.slideshow-wrapper {
+  animation: none;
+  left: -300%;
+}
+/* when we focus on the button, the background color changes */
+.slide-btn:focus {
+  background-color: #308d46;
+}
+/* ----- end of carousel control buttons stylings ----- */
+/*Footer settings*/
+.footer{
+  font-family: 'Paytone One', sans-serif;
+  font-weight: bolder;
+  background-color: #D2ECD0;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: black;
+  text-align: center;
+  height:70px;
+}
+/*Logo icon settings*/
+.logo{
+  height: 150px;
+  width: 100px;
+  padding-top: 10px;
+}
+/*h1*/
+h1{
+  font-family: 'Paytone One', sans-serif;
+  color: black;
+}
+/*h2*/
+h2{
+  text-decoration: underline;
+  text-align: center;
+}
+/*Colour and font for the Maori title*/
+.Maori {
+  font-family: 'Paytone One', sans-serif;
+  color: rgb(169, 37, 37);
+  font-size: 22px;
+}
+/*Nav icon settings*/
+.eco {
+  width: 40px;
+  padding-left: 10px;
+}
+/*Nav settings*/
+nav {
+  background-color: #D7E2EE;
+  top:-15px;
+}
+/*Mav button toggler settings*/
+.navbar-toggler{
+  background-color: rgb(120, 171, 222);
+}
+/*Nav toggler icon settings*/
+.navbar-toggler-icon{
+  background-color: #D7E2EE;
+}
+/*head settings*/
+.head {
+  background-color: #D2ECD0 ;
+  font-family: 'Paytone One', sans-serif;
+  font-weight: bolder;
+  left: 0;
+  width: 100%;
+  color: black;
+  text-align: center;
+}
+/*login button settings*/
+#login{
+  color: green;
+  font-weight: bold;
+}
+/*nav link font*/
+.nav-link {
+  font-weight: bold;
+}
+/*picturer/photo display settings*/
+.img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+/*list settings*/
+li{
+  text-align: justify;
+}
+/* Style the header: fixed position (always stay at the top) */
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: white;
+}
+/* The progress container (grey background) */
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #D2ECD0;
+}
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: 8px;
+  background: #04AA6D;
+  width: 0%;
+}
+/*content background settings*/
+.content{
+  background-color: white;
+}
+/*The more text button*/
+#more {
+ display: none;
+}
+/*myBtn settings*/
+#myBtn {
+  border-radius: 25px;
+  width: 100px;
+  background-color: #D7E2EE;
+}
+/*myBtn hover settings*/
+#myBtn:hover {
+  border-radius: 25px;
+  width: 100px;
+  background-color: rgb(120, 171, 222);
+  transform: scale(1.1);
+  font-weight: bolder;
+}
+/*myBtn2 settings*/
+#myBtn2 {
+  border-radius: 25px;
+  width: 100px;
+  background-color: #D7E2EE;
+}
+/*myBtn2 hover settings*/
+#myBtn2:hover {
+  border-radius: 25px;
+  width: 100px;
+  background-color: rgb(120, 171, 222);
+  transform: scale(1.1);
+  font-weight: bolder;
+}
+/*Form for the contact page*/
+/*This includes a lot of CSS for the various elements of the form*/
+#contact {
+  width: 100%;
+  height: 100%;
+}
+.section-header {
+  text-align: center;
+  margin: 0 auto;
+  padding: 40px 0;
+  font: 300 60px 'Oswald', sans-serif;
+  text-transform: uppercase;
+  color: black;
+  font-weight: bolder;
+}
+.contact-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  max-width: 840px;
+}
+/* Left contact page */
+.form-horizontal {
+ /*float: left;
+ */
+  max-width: 400px;
+  font-family: 'Lato';
+  font-weight: 400;
+}
+.form-control, textarea {
+  max-width: 400px;
+  background-color: white;
+  color: black;
+}
+.send-button {
+  margin-top: 15px;
+  height: 34px;
+  width: 400px;
+  overflow: hidden;
+  transition: all .2s ease-in-out;
+  background-color:rgb(155, 234, 155);
+  color: black;
+  font-weight: bolder;
+}
+.send-button:hover{
+  background-color: #04AA6D;
+  font-weight: bolder;
+  font-size: 20px;
+}
+.send-text {
+  display: block;
+  margin-top: 10px;
+  font: 700 12px 'Lato', sans-serif;
+}
+/* Begin Right Contact Page */
+.direct-contact-container {
+  max-width: 400px;
+}
+/* Location, Phone, Email Section */
+.contact-list {
+  list-style-type: none;
+  margin-left: -30px;
+  padding-right: 20px;
+}
+.list-item {
+  line-height: 4;
+  color: white;
+}
+.contact-text {
+  color: black;
+  font-weight: bolder;
+}
+.place {
+  margin-left: 62px;
+}
+.phone {
+  margin-left: 56px;
+}
+.gmail {
+  margin-left: 53px;
+  color: black;
+  font-weight: bolder;
+}
+.contact-text a {
+  color: black;
+  text-decoration: none;
+  transition-duration: 0.2s;
+  font-weight: bolder;
+}
+.contact-text a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+/*center block text*/
+#block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+a {
+  text-decoration: none;
+}
+.send-button1 {
+  margin-top: 15px;
+  height: 34px;
+  width: 400px;
+  overflow: hidden;
+  transition: all .2s ease-in-out;
+  background-color:rgb(155, 234, 155);
+  color: black;
+  font-weight: bolder;
+  display: block;
+}
+.send-button1:hover{
+  background-color: #04AA6D;
+  font-weight: bolder;
+  font-size: 20px;
+}
+.icon{
+  float: left;
+  height: 60px;
+  width: 60px;
+  padding: 8px;
+}
+.icon2{
+  float: right;
+  height: 60px;
+  width: 60px;
+  padding:8px;
+}
+/*Style for 404 Page*/
+.mainbox {
+  background-color: #95c2de;
+  margin: auto;
+  height: 600px;
+  width: 600px;
+  position: relative;
+}
+.err {
+  color: #ffffff;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 11rem;
+  position:absolute;
+  left: 20%;
+  top: 8%;
+}
+.far {
+  position: absolute;
+  font-size: 8.5rem;
+  left: 42%;
+  top: 15%;
+  color: #ffffff;
+}
+.err2 {
+  color: #ffffff;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 11rem;
+  position:absolute;
+  left: 68%;
+  top: 8%;
+}
+.msg {
+  text-align: center;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 1.6rem;
+  position:absolute;
+  left: 16%;
+  top: 45%;
+  width: 75%;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  text-decoration: underline;
+}
+.error{
+  background-color: #95c2de;
+}
+/*autocomplete form*/
+.autocomplete {
+ /*the container must be positioned relative:*/
+  position: relative;
+  display: inline-block;
+}
+input {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+}
+input[type=text] {
+  background-color: #f1f1f1;
+  width: 100%;
+}
+input[type=submit] {
+  background-color: DodgerBlue;
+  color: #fff;
+}
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+ /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
+}
+.autocomplete-items div:hover {
+ /*when hovering an item:*/
+  background-color: #e9e9e9;
+}
+.autocomplete-active {
+ /*when navigating through the items using the arrow keys:*/
+  background-color: DodgerBlue;
+  color: #ffffff;
+}
+/*Hover colour for Search button*/
+.blue:hover{
+  background-color: #04AA6D;
+  color: black;
+}
+/*reset button for forms*/
+.reset{
+  background-color: yellow;
+  padding: 2px;
+  border-radius: 25px;
+  display: block;
+  margin-left: 43%;
+}
+/*reset button hover for forms*/
+.reset:hover{
+  background-color: #bb6c42;
+}
+
+.left{
+  color: #04AA6D;
+  font-weight: bolder;
+}
+
+.nav-link:hover{
+  background-color: rgb(66, 66, 233);
+  color:white;
+  transform: scale(1.1);
+}
+
+#login:hover{
+  color: white;
+}
+
+.logo:hover{
+  transform: scale(1.1);
+  border: 1px solid;
+  opacity: 0.8;
+}
